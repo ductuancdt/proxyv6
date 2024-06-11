@@ -27,7 +27,7 @@ if [ "$(id -u)" -ne 0 ]; then
 fi
 
 echo "Updating the system and installing Squid..."
-sudo yum update -y || { echo "System update failed"; exit 1; }
+sudo yum update -y
 sudo yum -y install squid || { echo "Squid installation failed"; exit 1; }
 
 echo "Enabling and starting Squid service..."
